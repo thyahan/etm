@@ -95,7 +95,6 @@ const Game = () => {
             "text-3xl lg:text-4xl xl:text-5xl",
             "flex items-center justify-center bg-primary font-mono",
             "disabled:text-base-100 disabled:bg-neutral",
-            "active:bg-secondary active:text-base-100 active:scale-110",
             selectIndexs.includes(index)
               ? "bg-secondary text-base-100 scale-110"
               : ""
@@ -222,7 +221,6 @@ const Game = () => {
           onClick={() => handleOnOpClick(0)}
           className={classNames(
             "h-[calc(380px/4)] bg-primary text-5xl flex justify-center items-center rounded-md",
-            "active:bg-secondary active:text-base-100 active:scale-110",
             op === 0 ? "bg-secondary text-base-100 scale-110" : ""
           )}
         >
@@ -232,7 +230,6 @@ const Game = () => {
           onClick={() => handleOnOpClick(1)}
           className={classNames(
             "h-[calc(380px/4)] bg-primary text-5xl flex justify-center items-center rounded-md",
-            "active:bg-secondary active:text-base-100 active:scale-110",
             op === 1 ? "bg-secondary text-base-100 scale-110" : ""
           )}
         >
@@ -242,7 +239,6 @@ const Game = () => {
           onClick={() => handleOnOpClick(2)}
           className={classNames(
             "h-[calc(380px/4)] bg-primary text-5xl flex justify-center items-center rounded-md",
-            "active:bg-secondary active:text-base-100 active:scale-110",
             op === 2 ? "bg-secondary text-base-100 scale-110" : ""
           )}
         >
@@ -252,7 +248,6 @@ const Game = () => {
           onClick={() => handleOnOpClick(3)}
           className={classNames(
             "h-[calc(380px/4)] bg-primary text-5xl flex justify-center items-center rounded-md",
-            "active:bg-secondary active:text-base-100 active:scale-110",
             op === 3 ? "bg-secondary text-base-100 scale-110" : ""
           )}
         >
