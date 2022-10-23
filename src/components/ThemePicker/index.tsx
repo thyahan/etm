@@ -1,4 +1,5 @@
 import useTheme from "hooks/useTheme";
+import { BiChevronDown } from "react-icons/bi";
 
 const themes = [
   "light",
@@ -37,21 +38,34 @@ const ThemePicker = () => {
 
   return (
     <div className="dropdown">
-      <label tabIndex={0} className="btn m-1">
-        {theme}
+      <label
+        tabIndex={0}
+        className="btn m-1 w-32 capitalize flex items-center justify-between"
+      >
+        <span>{theme}</span>
+        <BiChevronDown />
       </label>
       <ul
         tabIndex={0}
-        className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+        className="dropdown-content p-2 shadow bg-base-100 rounded-box w-52"
       >
         {themes.map((t) => {
           return (
             <li
+              data-theme={t}
               key={t}
               onClick={() => changeTheme(t)}
-              className="capitalize border-b border-red-500 cursor-pointer"
+              className="p-2 capitalize border-b cursor-pointer mb-1  border-2 border-gray-400 rounded-md"
             >
-              {t}
+              <div className="h-full flex item-center gap-1 justify-between">
+                <p>{t}</p>
+                <div className="flex gap-1 items-center">
+                  <span className="w-2 h-4 rounded-md bg-primary"></span>
+                  <span className="w-2 h-4 rounded-md bg-secondary"></span>
+                  <span className="w-2 h-4 rounded-md bg-accent"></span>
+                  <span className="w-2 h-4 rounded-md bg-neutral"></span>
+                </div>
+              </div>
             </li>
           );
         })}
