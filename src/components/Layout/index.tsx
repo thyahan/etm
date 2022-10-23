@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { FC, ReactNode, useEffect } from "react";
 import useTheme from "hooks/useTheme";
+import { MdSettings } from "react-icons/md";
 
 const ThemePicker = dynamic(() => import("components/ThemePicker"), {
   ssr: false,
@@ -15,14 +16,17 @@ const Layout: FC<{ children: ReactNode }> = ({ children }) => {
   }, []);
 
   return (
-    <div className="grid grid-rows-2">
+    <div className="h-screen w-screen flex flex-col">
       {/* header */}
-      <div className="h-16">
-        <ThemePicker />
+      <div className="h-16 px-4 mx-auto w-full max-w-[1600px] flex justify-between items-center">
+        <p className="text-4xl font-mono">ETM</p>
+        <a className="cursor-pointer">
+          <MdSettings className="text-2xl" />
+        </a>
       </div>
 
-      {/* content */}
-      <main>{children}</main>
+      {/* page content */}
+      <main className="page flex-1 overflow-auto">{children}</main>
     </div>
   );
 };

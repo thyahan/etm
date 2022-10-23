@@ -20,4 +20,8 @@
   body::-webkit-scrollbar-thumb {
     @apply bg-gray-400;   
   }
+
+  .page {
+    @apply w-full max-w-[1600px] mx-auto p-2;
+  }
 }
