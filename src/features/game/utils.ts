@@ -15,7 +15,6 @@ const randomAddition = (level: number) => {
   const b = randomIntFromInterval(from, to);
 
   const data = [a, b, a + b];
-  console.log(data);
 
   return data;
 };
@@ -27,7 +26,6 @@ const randomMultiplication = (level: number) => {
   const b = randomIntFromInterval(from, to);
 
   const data = [a, b, a * b];
-  console.log(data);
 
   return data;
 };
@@ -36,8 +34,6 @@ export const generateItems = (level: number): Item[] => {
   const operator = [0, 1, 2].map(() => {
     return randomIntFromInterval(0, 3);
   });
-
-  console.log({ operator });
 
   let resp: number[] = [];
 
