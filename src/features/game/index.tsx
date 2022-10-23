@@ -107,10 +107,12 @@ const Game = () => {
   }, [level]);
 
   useEffect(() => {
-    if (items.every((i) => !i.active)) {
+    if (items.length && items.every((i) => !i.active)) {
+      console.log("all", items);
       setScore((p) => p + 1);
       setItems(generateItems(level));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items]);
 
   return (
